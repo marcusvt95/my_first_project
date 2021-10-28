@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAI</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+    a, #r {
+      color: #33FF3B;
+    }
+    input {
+      border: 1px solid #33FF3B;
+      padding: .15rem;
+    }
+    button {
+      background: #339DF;
+      border: 1px solid #33FF3BF;
+      border-radius: 4px;
+      color: #000;
+      padding: .15rem;
+      cursor: pointer;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SXZQSH3MW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-8SXZQSH3MW');
+  </script>
+</head>
+<body>
+  <h1>Marcus Vinicius Tavares</h1>
+  <p>Hey! This is my website.</p>
+  <p>I'm learning to be a full stack developer with <a href="https://www.alura.com.br/">Alura</a>.</p>
+  <hr>
+  <p>I like being called AAI. Can you call me?</p>
+  <form>
+    <label for="f">What do you want to do with me?</label>
+    <input id="f">
+    <button>Respond</button>
+  </form>
+  <p id="r">
+    <!-- Aai! Input f for me, baby! -->
+  </p>  
+  <script>    
+    let b = document.querySelector('button');
+    b.onclick = function(e) {
+      e.preventDefault();
+      let r = document.getElementById('r');
+      let v = f.value;
+      if (v === '') {
+          v = 'make a barbecue';
+      }
+      r.innerHTML = " OK! Let's " + v + ' after learning Python. Can I trust you, ma friend?';
+      gtag('event', 'todo', {'value': v});
+    };
+  </script>
+</body>
+</html>
